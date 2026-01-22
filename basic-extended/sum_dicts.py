@@ -11,27 +11,15 @@
 числа в словнику можуть бути додатними та від'ємними.
 """
 
-# def sum_dicts(*args: dict) -> dict:
-#     result_dict = {}
-
-#     for inner_dict in args:
-#         for key, value in inner_dict.items():
-#             if result_dict.get(key) != None:
-#                 result_dict[key] += value
-#             else:
-#                 result_dict[key] = value
-
-#     return result_dict
-
 def sum_dicts(*args: dict) -> dict:
     result_dict = {}
 
     for inner_dict in args:
         for key, value in inner_dict.items():
-
-            result_dict[key] += value
-
-
+            if result_dict.get(key) != None:
+                result_dict[key] += value
+            else:
+                result_dict[key] = value
 
     return result_dict
 
